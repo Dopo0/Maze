@@ -84,12 +84,12 @@ def step(i, j, fn, matrix=None, deep_path=[], final_path=[], end_point=(0, 0)):
             return
 def main():
     st.title("Maze")
-    origin_img = ["../Maze1.png","../Maze2.png"]
+    origin_img = ["Maze1.png","Maze2.png"]
     start_end = {'Maze1':[(0, 4),(12, 7)],'Maze2':[(1, 1),(2, 5)]}
 
     img = image_select(
         label="Select a maze",
-        images=["../Maze1_resize.png", "../Maze2_resize.png"],
+        images=["Maze1_resize.png", "Maze2_resize.png"],
         captions=["Maze 1", "Maze 2"],
         use_container_width = False,
         return_value ='index'
