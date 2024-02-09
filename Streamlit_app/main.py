@@ -84,6 +84,7 @@ def step(i, j, fn, matrix=None, deep_path=[], final_path=[], end_point=(0, 0)):
             return
 def main():
     st.title("Maze")
+    st.image("Maze1_resize.png")
     origin_img = ["Maze1.png","Maze2.png"]
     start_end = {'Maze1':[(0, 4),(12, 7)],'Maze2':[(1, 1),(2, 5)]}
 
