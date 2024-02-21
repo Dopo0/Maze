@@ -82,6 +82,8 @@ def step(i, j, fn, matrix=None, deep_path=[], final_path=[], end_point=(0, 0)):
             matrix[(i, j)] = -2
             final_path.pop()
             return
+            
+@st.cache_resource
 def main():
     st.title("Maze")
     origin_img = ["Maze1.png","Maze2.png"]
