@@ -108,11 +108,11 @@ def main():
     maze2_resize = parent_dir + "/Maze2_resize.png"
 
     ## check the path
-    #st.write(parent_dir)
-    #st.write(maze1_resize)
+    # st.write(parent_dir)
+    # st.write(maze1_resize)
 
-    #files = os.listdir(parent_dir)
-    #for file in files:
+    # files = os.listdir(parent_dir)
+    # for file in files:
     #    st.write(file)
 
     img = image_select(
