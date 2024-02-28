@@ -13,6 +13,7 @@ import warnings
 import shutil
 import time
 import base64
+import inspect
 
 warnings.simplefilter("ignore")
 
@@ -110,8 +111,12 @@ def main():
     )
     image_path = origin_img[img]
 
+    current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    parent_dir = os.path.dirname(current_dir)
+    markdown_file_path = parent_dir + origin_img[img]
+
     if st.button("Run Deep Search"):
-        maze1 = image_to_matrix(image_path)
+        maze1 = image_to_matrix(markdown_file_path)
         image_name2 = os.path.splitext(os.path.basename(image_path))[0]
         try:
             os.makedirs(image_name2)
