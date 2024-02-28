@@ -102,21 +102,26 @@ def main():
     origin_img = ["Maze1.png","Maze2.png"]
     start_end = {'Maze1':[(0, 4),(12, 7)],'Maze2':[(1, 1),(2, 5)]}
 
+    current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    parent_dir = os.path.dirname(current_dir)
+    maze1_resize = parent_dir + "/Maze1_resize.png"
+    maze2_resize = parent_dir + "/Maze2_resize.png"
+    st.write(parent_dir)
+    st.write(maze1_resize)
+
     img = image_select(
         label="Select a maze",
-        images=["Maze1_resize.png", "Maze2_resize.png"],
+        images=[maze1_resize, maze2_resize],
         captions=["Maze 1", "Maze 2"],
         use_container_width = False,
         return_value ='index'
     )
     image_path = origin_img[img]
 
-    current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    parent_dir = os.path.dirname(current_dir)
-    markdown_file_path = parent_dir + origin_img[img]
+
 
     if st.button("Run Deep Search"):
-        maze1 = image_to_matrix(markdown_file_path)
+        maze1 = image_to_matrix(image_path)
         image_name2 = os.path.splitext(os.path.basename(image_path))[0]
         try:
             os.makedirs(image_name2)
