@@ -109,6 +109,9 @@ def main():
     st.write(parent_dir)
     st.write(maze1_resize)
 
+    for file in parent_dir:
+        st.write(file)
+
     img = image_select(
         label="Select a maze",
         images=[maze1_resize, maze2_resize],
