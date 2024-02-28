@@ -109,7 +109,8 @@ def main():
     st.write(parent_dir)
     st.write(maze1_resize)
 
-    for file in parent_dir:
+    files = os.listdir(parent_dir)
+    for file in files:
         st.write(file)
 
     img = image_select(
