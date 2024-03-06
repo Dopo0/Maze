@@ -129,15 +129,12 @@ def main():
     if st.button("Run Deep Search"):
         maze1 = image_to_matrix(image_path)
         image_name2 = os.path.splitext(os.path.basename(image_path))[0]
-        try:
-            os.makedirs(image_name2)
-        except FileExistsError:
-            # directory already exists
-            with st.spinner("Searching path"):
-                shutil.rmtree(image_name2)
-                time.sleep(2)
 
-            os.makedirs(image_name2)
+        with st.spinner("Searching path"):
+
+            time.sleep(2)
+
+        os.makedirs(image_name2)
 
         start = start_end[image_name2][0]
         end_point = start_end[image_name2][1]
