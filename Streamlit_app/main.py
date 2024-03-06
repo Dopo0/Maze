@@ -99,14 +99,14 @@ def step(i, j, fn, matrix=None, deep_path=[], final_path=[], end_point=(0, 0)):
 
 def main():
     st.title("Maze")
-    origin_img = ["Maze1.png","Maze2.png"]
     start_end = {'Maze1':[(0, 4),(12, 7)],'Maze2':[(1, 1),(2, 5)]}
 
     current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     parent_dir = os.path.dirname(current_dir)
     maze1_resize = parent_dir + "/Maze1_resize.png"
     maze2_resize = parent_dir + "/Maze2_resize.png"
-
+    origin_img = [parent_dir + "/Maze1.png",
+                  parent_dir + "/Maze2.png"]
     ## check the path
     # st.write(parent_dir)
     # st.write(maze1_resize)
