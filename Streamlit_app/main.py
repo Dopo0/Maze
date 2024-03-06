@@ -134,7 +134,7 @@ def main():
 
             time.sleep(2)
 
-        os.makedirs(image_name2)
+        #os.makedirs(image_name2)
 
         start = start_end[image_name2][0]
         end_point = start_end[image_name2][1]
