@@ -133,7 +133,7 @@ def main():
             os.makedirs(image_name2)
         except FileExistsError:
             # directory already exists
-            with st.spinner("Erasing previous directory"):
+            with st.spinner("Searching path"):
                 shutil.rmtree(image_name2)
                 time.sleep(2)
 
